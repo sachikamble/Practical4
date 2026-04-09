@@ -1,0 +1,202 @@
+/* ================================================
+   style.css - Registration Form Stylesheet
+   ================================================ */
+
+/* ---------- Reset ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Body / Page ---------- */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: #eef0f4;
+  color: #333333;
+  min-height: 100vh;
+  padding: 40px 16px;
+}
+
+/* ---------- Page Wrapper (centers the form) ---------- */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* ---------- Form Container ---------- */
+.form-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 680px;
+  border: 1px solid #d0d4db;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ---------- Form Header ---------- */
+.form-header {
+  background-color: #1a56db;
+  color: #ffffff;
+  padding: 20px 28px;
+}
+
+.form-header h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.form-header p {
+  font-size: 13px;
+  opacity: 0.88;
+}
+
+/* ---------- Form Sections ---------- */
+.form-section {
+  padding: 22px 28px;
+  border-bottom: 1px solid #e8eaed;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #1a56db;
+  margin-bottom: 16px;
+}
+
+/* ---------- Form Layout ---------- */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Labels ---------- */
+label {
+  font-size: 13px;
+  font-weight: bold;
+  color: #444444;
+  margin-bottom: 5px;
+}
+
+/* ---------- Inputs & Selects ---------- */
+input,
+select {
+  padding: 9px 12px;
+  font-size: 14px;
+  border: 1.5px solid #cccccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #333333;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #1a56db;
+}
+
+/* ---------- Validation States ---------- */
+input.err,
+select.err {
+  border-color: #e53935;
+  background-color: #fff5f5;
+}
+
+input.ok,
+select.ok {
+  border-color: #2e7d32;
+  background-color: #f4fff5;
+}
+
+/* ---------- Error Messages ---------- */
+.err-msg {
+  font-size: 12px;
+  color: #c62828;
+  margin-top: 4px;
+  display: none;
+}
+
+.err-msg.show {
+  display: block;
+}
+
+/* ---------- Form Footer ---------- */
+.form-footer {
+  padding: 22px 28px;
+}
+
+/* ---------- Submit Button ---------- */
+.submit-btn {
+  width: 100%;
+  padding: 11px;
+  background-color: #1a56db;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #1445b5;
+}
+
+.submit-btn:active {
+  background-color: #0f3690;
+}
+
+/* ---------- Success Message ---------- */
+.success-box {
+  display: none;
+  margin-top: 14px;
+  padding: 12px 16px;
+  background-color: #e8f5e9;
+  border: 1px solid #2e7d32;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #1b5e20;
+  font-weight: bold;
+  text-align: center;
+}
+
+.success-box.show {
+  display: block;
+}
+
+/* ---------- Responsive (mobile) ---------- */
+@media (max-width: 520px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-header,
+  .form-section,
+  .form-footer {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
